@@ -3,7 +3,6 @@ body {
   background-size: cover;
   width: 100vw;
   height: 100%;
-  font-family: 'Lilita One', sans-serif;
   font-weight: 200;
   color: #fff;
   font-size: 14px;
@@ -88,16 +87,22 @@ body {
 }
 
 .card-links {
-  margin: 9px 0px;
-  background-color: #fff;
-  width: 900px;
   display: block;
+  /* justify-content: start; */
+  /* align-items: center; */
+  margin: 9px 0px;
+  background-color: #eff5f7;
+  width: 900px;
+  /* display: block; */
   text-align: center;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 1px 2px #888888;
+  left: 180px;
+  border-radius: 5px;
+  text-decoration: none
 }
 
-a {
+
+.card-links ul > li > a {
   text-decoration: none;
   color: #a9a9a9;
 }
@@ -117,7 +122,7 @@ h2 {
   flex-wrap: wrap;
   /* justify-content: start; */
   /* align-items: center; */
-  margin: 9px 0px;
+  margin: 10px 0px;
   background-color: #eff5f7;
   width: 900px;
   /* display: block; */
@@ -143,17 +148,15 @@ h2 {
   width: 900px;
   display: block;
   text-align: center;
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
   left: 180px;
 }
-
 
 .jules-intro-text {
   color: #ffffff;
 }
 
 .list-inline {
-  padding: 30px;
+  padding: 0px;
   font-family: 'Montserrat';
 }
 
@@ -164,6 +167,12 @@ h2 {
 
 .list-inline > li i{
   font-size: 20px;
+  color: #0D3B30;
+}
+
+.list-inline a:hover {
+  color: #0D3B30;
+  font-weight: bolder;
 }
 
 .overlay {
@@ -173,62 +182,47 @@ h2 {
   background-image: url("images/orlova-maria-375346.jpg"); /* for default */
   background-size: cover;
   background-position: center;
+  border-radius: 10px
 }
 
-.text-to-front {
+.overlay .text-to-front {
   opacity: 0;
-  background: #2193b0;
-  text-align: center;
+  background: #00bf8f;
+  background: -webkit-linear-gradient(to right, #00bf8f, #001510);
+  background: linear-gradient(to right, #00bf8f, #001510);
   font-size: 30px;
   line-height: 40px;
   transition: opacity 200ms ease;
-  /*background: -webkit-linear-gradient(left, #6dd5ed, #2193b0);
-  background: -o-linear-gradient(left, #6dd5ed, #2193b0);
-  background: linear-gradient(to right, #6dd5ed, #2193b0)*/
-  background-image: url("images/Aubergine (1).jpg");
+  /* martin colores */
 }
 
 .overlay:hover .text-to-front {
-  opacity: 1;
-
+  opacity: .8;
 }
 
 .ofirst {
-  background-image: url("images/coding.gif");
+  background-image: url("images/02-27-2017-715076.jpg")
 }
 
 .osecond {
   background-image: url("images/florian-klauer-489.jpg");
+}
+
+.othird {
+  background-image: url("images/coding.gif");
 
 }
 
-.overlay .osecond {
-  opacity: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  /* background: #ff0084;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #33001b, #ff0084);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #33001b, #ff0084); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  text-align: center;
-  font-size: 30px;
-  line-height: 40px;
-  transition: opacity 200ms ease;
-  background: #2193b0; /* el de martin */
+.ofourth {
+  background-image: url("images/giphy (2).gif")
 }
 
-.overlay .osecond:hover .text-to-front {
-  opacity: 1;
-}
+.ofifth {
+  background-image: url("images/books-1655783_640.jpg")
 
-.overlay .othird {
-  margin: 20px 5px;
-  width: 270px;
-  height: 250px;
-  background-image: url("images/slava-bowman-161206.jpg");
-  background-size: cover;
-  background-position: center;
+}
+.osixth {
+  background-image: url("images/psychology-2422442_640.png");
 }
 
 .text {
@@ -238,7 +232,6 @@ h2 {
   margin: 0 auto;
   font-family: 'Montserrat Alternates', sans-serif;
 }
-
 
 .text p {
   font-size: 20px;
@@ -252,25 +245,38 @@ h2 {
   color: white;
 }
 
-.overlay .third .text-to-front {
-  opacity: 0;
-  background: #00bf8f;
-  background: -webkit-linear-gradient(to right, #00bf8f, #001510);
-  background: linear-gradient(to right, #00bf8f, #001510);
-  font-size: 30px;
-  line-height: 40px;
-  transition: opacity 200ms ease;
-  /* martin colores */
+.h2, h2 {
+    /* font-size: 2rem; */
 }
-
 .footer {
   background-color: crimson;
   text-align: center;
   height: 200px;
   width: 100vw;
+  font-family: 'Montserrat'
+  color: #eff5f7;
 }
 
 .footer-text {
-  font-size: 30px;
-  color: #a30c0c;
+  font-size: 15px;
+  font-family: 'Montserrat';
+  color: #eff5f7;
+}
+
+.footer .fixed-bottom h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #eff5f7;
+}
+
+.footer ul > li > a {
+ color: #eff5f7;
+}
+
+.footer ul > li > a .fab {
+  color: #eff5f7;
+}
+
+.footer .list-inline a:hover {
+  font-weight: bolder;
+  color: white;
 }
