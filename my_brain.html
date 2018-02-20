@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Brain</title>
+</head>
+<body>
+  <style>
+  body { height: 100vh; background-size: cover;}
+
+</style>
+<script>
+  fetch('https://api.unsplash.com/search/photos?page=1&query=panama&client_id=12ddc3ea617a2b72ea27c08df9bfa29dbdd70c7c17452ea87aefc56b6f275e5f').then(response => response.json()).then(data => {
+    const images = data.results;
+    const index = Math.floor(Math.random() * images.length);
+    return images[index].urls.regular;
+  })
+  .then(imageUrl => {
+    document.body.style['background-image'] = `url(${imageUrl})`;
+  });
+</script>
+</body>
+</html>

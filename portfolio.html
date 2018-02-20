@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+</head>
+<body>
+  <h1>Portfolio</h1>
+  <p>My latest GitHub projects</p>
+  <ul id="project-list">
+  </ul>
+  <script>const list = document.getElementById('project-list');
+    function renderGithubRepos(repos) {
+      for (const repo of repos) {
+        const entry = document.createElement('li');
+        const link = document.createElement('a');
+        link.textContent = repo.name;
+        link.href = repo.html_url
+        entry.appendChild(link)
+        list.appendChild(entry)
+      }
+    }
+    fetch('https://api.github.com/users/juliettech13/repos')
+      .then(function(response) {
+        return response.json()
+      }).then(function(repos) {
+        renderGithubRepos(repos)
+      })
+  </script>
+
+</body>
+</html>
